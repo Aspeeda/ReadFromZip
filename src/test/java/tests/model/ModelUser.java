@@ -2,7 +2,7 @@ package tests.model;
 
 import java.util.ArrayList;
 
-public class modelUser {
+public class ModelUser {
     public static class User {
         public int id;
         public String name;

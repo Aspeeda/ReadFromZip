@@ -2,7 +2,7 @@ package tests;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-import tests.model.modelUser;
+import tests.model.ModelUser;
 
 import java.io.File;
 
@@ -14,7 +14,7 @@ public class TestJsonReading {
     void jsonReadModel() throws Exception {
         ObjectMapper mapper = new ObjectMapper ();
         File file = new File("src/test/resources/info.json");
-        modelUser.User user = mapper.readValue(file, modelUser.User.class);
+        ModelUser.User user = mapper.readValue(file, ModelUser.User.class);
 
         assertThat(user.id).isEqualTo(1);
         assertThat(user.name).isEqualTo("Leanne Graham");
